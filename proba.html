@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Boston Film Festival</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/w3images/coffeehouse.jpg");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+</style>
+<script>
+        $(document)
+            .ready(function () {
+                $(".ui.dropdown").dropdown();
+                $(".red-film").click(function (event) {
+                    $("#nazivFilma").html($(this).attr("naziv"));
+                    $("#opisFilma").html($(this).attr("opis"));
+                    var link = $(this).attr("youtube");
+                    link = link.replace("watch?v=", "embed/");
+                    $("#youtubeIframe").attr("src", link);
+                    $(".ui.modal").modal({
+                        onHide: function () {
+                            $("#youtubeIframe").attr("src", "");
+                        }
+                    }).modal("show");
+                })
+            })
+            ;
+    </script>
+</head>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">WHERE</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Open from 6pm to 12pm</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+  <img src="https://www.langan.com/wp-content/uploads/2019/02/Boston-996x554.jpg">
+    <span class="w3-text-white" style="font-size:90px">a<br>a</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">15 Adr street, 5015</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE FILM FASTIVAL</span></h5>
+    <div class="blog">	
+				<h1>Blog</h1>
+				<a href="WEATHERING_WITH_YOU.html">
+					<div class="articles">
+						<div class="left_blog">
+							<h1>WEATHERING WITH YOU</h1>
+								<p>
+Weathering with You (Japanese: 天気の子, Hepburn: Tenki no Ko, lit. "Child of Weather") is a 2019 Japanese animated romantic fantasy film written and directed by Makoto Shinkai. Set in Japan during a period of exceptionally rainy weather, the film tells the story of a high-school boy who runs away from his rural home to Tokyo and befriends an orphan girl who has the ability to manipulate the weather. The film was produced by Wakana Okamura and Kinue Itō, and the music was composed by Radwimps.								</p>
+						</div>
+						
+							<img src="https://www.redbrick.me/wp-content/uploads/2020/01/unnamed.png"width="500" height="600">
+						
+					</div>
+				</a>
+				
+				<a href="The_nvisible_Man.html">
+					<div class="articles">
+						<div class="left_blog">
+							<h1>‘The Invisible Man</h1>
+								<p>
+When Cecilia's abusive ex takes his own life and leaves her his fortune, she suspects his death was a hoax. As a series of coincidences turn lethal, Cecilia works to prove that she is being hunted by someone nobody can see.								</p>
+						</div>
+							<img src="5e6634ea355fb.image.jpg"width="500" height="600">
+					</div>
+				</a>
+					
+				<a href="The_New_Mutants.html">
+					<div class="articles">
+						<div class="left_blog">
+							<h1>The New Mutants</h1>
+								<p>
+Five young mutants, just discovering their abilities while held in a secret facility against their will, fight to escape their past sins and save themselves.						</div>
+						<img src="TheNewMutantsPoster.jpeg"width="500" height="600">
+					</div>
+				</a>
+				
+				<a href="Spirit.html">
+					<div class="articles">
+						<div class="left_blog">
+							<h1>Spirit</h1>
+								<p>
+A wild stallion is captured by humans and slowly loses the will to resist training, yet, throughout his struggles for freedom, the stallion refuses to let go of the hope of one day returning home to his herd.						</div>
+					<img src="https://tv.aladin.info/film/logo/2382.jpg"width="500" height="600">
+					</div>
+				</a>
+			</div>
+			
+        </div>
+    </section>
+    <p><strong>Opening hours:</strong> everyday from 6pm to 12pm.</p>
+    <p><strong>Address:</strong> Boston Public Garden, Boston</p>
+  </div>
+</div>
+
+<!-- Menu Container -->
+<a class="weatherwidget-io" href="https://forecast7.com/en/42d36n71d06/boston/" data-label_1="BOSTON" data-label_2="WEATHER" data-theme="original" >BOSTON WEATHER</a>
+			<script>
+			!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+			</script>
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE MENU</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Wednesday');" id="myLink">
+        <div class="w3-col s6 tablink">Wednesday</div>
+      </a>
+       <a href="javascript:void(0)" onclick="openMenu(event, 'Thursday');">
+        <div class="w3-col s6 tablink">Thursday</div>
+      </a>
+	  <a href="javascript:void(0)" onclick="openMenu(event, 'Friday');">
+        <div class="w3-col s6 tablink">Friday</div>
+      </a>
+	  <a href="javascript:void(0)" onclick="openMenu(event, 'Saturday');">
+        <div class="w3-col s6 tablink">Saturday</div>
+      </a>
+    </div>
+
+    <div id="Wednesday" class="w3-container menu w3-padding-48 w3-card">
+     <td class="day">
+      <div class="date"></div>
+	  <div class="event">
+        <div class="event-desc">
+          <a data-toggle="modal" data-target="#Tue1">WEATHERING WITH YOU</a>
+        </div>
+        <div class="event-time">
+          6:00pm to 8:00pm
+        </div>
+      </div>
+	  <div class="event">
+        <div class="event-desc">
+          <a data-toggle="modal" data-target="#Tue2">Once Upon a Time in Hollywood</a>
+        </div>
+        <div class="event-time">
+          8:10pm to 10:50pm
+        </div>
+      </div>
+	  <div class="event">
+        <div class="event-desc">
+          <a data-toggle="modal" data-target="#Tue3">After We Collided</a>
+        </div>
+        <div class="event-time">
+          11:00pm to 00:50am
+        </div>
+      </div>
+    </td>
+    </div>
+
+    <div id="Thursday" class="w3-container menu w3-padding-48 w3-card">
+      <td class="day">
+      <div class="date"></div>
+	  <div class="event">
+        <div class="event-desc">
+          <a data-toggle="modal" data-target="#Wed1">Onward</a>
+        </div>
+        <div class="event-time">
+          6:00pm to 7:45pm
+        </div>
+      </div>
+	  <div class="event">
+        <div class="event-desc">
+          <a data-toggle="modal" data-target="#Wed2">Otac</a>
+        </div>
+        <div class="event-time">
+          7:55pm to 10:00pm
+        </div>
+      </div>
+	  <div class="event">
+        <div class="event-desc">
+          <a data-toggle="modal" data-target="#Wed3">Parasite</a>
+        </div>
+        <div class="event-time">
+          10:05pm to 00:15am
+        </div>
+      </div>
+    </td>
+    </div>  
+	 <div id="Friday" class="w3-container menu w3-padding-48 w3-card">
+      <td class="day">
+      <div class="date"></div>
+      <div class="event">
+        <div class="event-desc">
+          <a data-toggle="modal" data-target="#Thu1">Frozen 2</a>
+        </div>
+        <div class="event-time">
+          6:00pm to 7:45pm
+        </div>
+      </div>
+	  <div class="event">
+        <div class="event-desc">
+          <a data-toggle="modal" data-target="#Thu2">Toy Story (1995)</a>
+        </div>
+        <div class="event-time">
+          8:00pm to 10:30pm
+        </div>
+      </div>
+	  <div class="event">
+        <div class="event-desc">
+          <a data-toggle="modal" data-target="#Thu3">Јужни ветар </a>
+        </div>
+        <div class="event-time">
+          10:40pm to 00:45pm
+        </div>
+      </div>
+    </td>
+    </div> 
+	<div id="Saturday" class="w3-container menu w3-padding-48 w3-card">
+      <td class="day">
+      <div class="date"></div>
+	  <div class="event">
+        <div class="event-desc">
+          <a data-toggle="modal" data-target="#Fri1">Zootropolis</a>
+        </div>
+        <div class="event-time">
+          6:00pm to 7:50pm
+        </div>
+      </div>
+	  <div class="event">
+        <div class="event-desc">
+          <a data-toggle="modal" data-target="#Fri2">The War with Grandpa </a>
+        </div>
+        <div class="event-time">
+          8:00pm to 10:20pm
+        </div>
+      </div>
+	  <div class="event">
+        <div class="event-desc">
+          <a data-toggle="modal" data-target="#Fri3">Sonic the Hedgehog</a>
+        </div>
+        <div class="event-time">
+          10:30pm to 00:10pm
+        </div>
+      </div>
+    </td>
+    </div> 
+    <img src="https://www.ansef.org.br/wp-content/uploads/2020/07/cinema.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+  </div>
+</div>
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>
+    <p>Find us at some address at some place.</p>
+	<div class="map">
+						<div id="gmap-canvas" style="height:100%; width:100%;max-width:100%;">
+							<iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://maps.google.com/maps?q=Boston%20Public%20Garden&t=&z=13&ie=UTF8&iwloc=&output=embed">
+							</iframe>
+						</div>
+					</div>
+    <script src="https://www.szablonypremium.pl/google-maps-authorization.js?id=e58b5c5a-f529-a86e-9f5b-a7904f6bc302&c=google-map-code&u=1476226654" defer="defer" async="async"></script>
+    <p><strong>Reserve</strong> a place, ask for today's special or just send us a message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2017-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+ <div class="footer_img">
+			<a href="https://www.facebook.com/" class="fa fa-facebook">Facebook</a>
+			<a href="https://twitter.com/home" class="fa fa-twitter">Twitter</a>
+			<a href="https://www.instagram.com/" class="fa fa-instagram">Instagram</a>
+		</div>
+        <p>Copyright © 2020, Boston Film Festival. All rights reserved.</p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
